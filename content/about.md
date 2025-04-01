@@ -12,7 +12,7 @@ menu:
 
 ## Hello, I'm Adrian 👋
 
-I'm a PowerShell Systems Administrator with a passion for automation and making complex systems work seamlessly. By day, I wrangle servers and craft scripts to make IT operations smoother. When I'm not diving deep into PowerShell or managing infrastructure, you'll find me embracing my most important role - being a dad.
+I'm a Systems Administrator with a passion for automation and PowerShell. By day, I wrangle servers and craft scripts to make IT operations smoother. When I'm not diving deep into PowerShell or managing infrastructure, you'll find me embracing my most important role - being a dad.
 
 ### What I Do
 

@@ -12,7 +12,7 @@ menu:
 
 ## Qualifications Summary
 
-I am a System Administrator with over a decade of experience in IT, including three years specializing in PowerShell automation, device management, and cloud technologies. I have extensive experience in managing hybrid environments, including Active Directory, Microsoft Intune, and Microsoft 365. My expertise includes deploying operating systems using MDT, streamlining device management processes, and transitioning businesses to modern cloud-based solutions.
+I am a System Administrator with over a decade of experience in IT, including three years specializing in PowerShell automation, device management, and cloud technologies. I hold certifications such as Cisco Certified Network Associate (CCNA) and Microsoft Certified: Endpoint Administrator Associate, showcasing my expertise in networking and modern device management. I have extensive experience in managing hybrid environments, including Active Directory, Microsoft Intune, and Microsoft 365. My expertise includes deploying operating systems using MDT.
 
 ## Technical Skills
 
@@ -21,7 +21,6 @@ I am a System Administrator with over a decade of experience in IT, including th
 - Entra & Active Directory
 - Azure DevOps
 - Microsoft Intune
-- Azure Automation (PS Runbooks)
 - Docker
 - Bicep
 
