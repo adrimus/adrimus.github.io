@@ -1,29 +1,39 @@
 ---
-title: "PowerShell Resources"
+title: "Learning Resources"
 date: "2025-04-01"
 draft: false
-description: "A curated list of PowerShell resources and books to help you master automation."
+description: "A curated list of resources and books to help you in your tech career"
 params:
   ShowShareButtons: true
   ShowReadingTime: true
   ShowBreadCrumbs: true
 ---
 
-# PowerShell Resources
+# Resources
 
-## Books
+## PowerShell Books
 - **[Learn PowerShell in a Month of Lunches](https://www.manning.com/books/learn-powershell-in-a-month-of-lunches)**  
   A beginner-friendly book that introduces PowerShell concepts in manageable lessons.
 
-- **[PowerShell Scripting and Toolmaking](https://www.manning.com/books/powershell-scripting-and-toolmaking)**  
+- **[Learn PowerShell Toolmaking in a Month of Lunches](https://www.manning.com/books/learn-powershell-toolmaking-in-a-month-of-lunches)**  
+  The best way to learn PowerShell scripting and toolmaking in just one hour a day.
+
+- **[PowerShell Scripting and Toolmaking](https://leanpub.com/powershell-scripting-toolmaking)**  
   A deep dive into advanced scripting and tool creation with PowerShell.
 
 - **[The PowerShell Conference Book](https://leanpub.com/powershell-conference-book)**  
   A collection of PowerShell tips and techniques from experts in the field.
 
+## Other tech Books
+- **[How to Find a Wolf in Siberia or, How to Troubleshoot Practically Anything](https://leanpub.com/troubleshooting)** 
+  A concise, practical methodology to becoming a better troubleshooter for practically anything
+
 ## Interactive Learning
 - **[PowerShell Koans](https://github.com/vexx32/PSKoans)**  
   An interactive way to learn PowerShell by solving small challenges.
+
+- **[Tiny PowerShell Projects](https://github.com/dfinke/Tiny-PowerShell-Projects)**  
+  Learning PowerShell through test-driven development of games and puzzles
 
 ## Online Resources
 - **[Microsoft PowerShell Documentation](https://learn.microsoft.com/en-us/powershell/)**  
@@ -34,16 +44,6 @@ params:
 
 - **[John Savill's YouTube Channel](https://www.youtube.com/user/NTFAQGuy)**  
   A great resource for learning PowerShell and other IT topics through video tutorials.
-
-## Tools and Modules
-- **[Pester](https://github.com/pester/Pester)**  
-  A testing framework for PowerShell to ensure your scripts work as expected.
-
-- **[PSReadLine](https://github.com/PowerShell/PSReadLine)**  
-  Enhances the PowerShell command-line experience with syntax highlighting and autocompletion.
-
-- **[PowerShell Gallery](https://www.powershellgallery.com/)**  
-  A repository of PowerShell modules and scripts shared by the community.
 
 ## Communities
 - **[PowerShell Discord](https://discord.gg/powershell)**  
