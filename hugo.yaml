@@ -1,15 +1,14 @@
-baseURL: https://adrimus.github.io/
+baseURL: https://adrianmuscat.com/
 languageCode: en-us
-title: Home
+title: 'Adrian Muscat'
 theme: PaperMod
 
 params:
   # Profile mode
-  profileMode:
+  homeInfoParams:
     enabled: true
     title: "Hello" # optional default will be site title
-    subtitle: "I'm Adrian 👋🏼"
-    content: "test"
+    content: "Welcome to my page! I'm Adrian 👋🏼. I write about PowerShell, tech, and more. Check out my social links below to connect with me!"
     #imageUrl: "/img/1A6A7989.jpg" # optionalC:\github\MySite\static\img\1A6A7989.jpg
     #imageTitle: "Me title" # optional
     #imageWidth: 120 # custom size
@@ -24,11 +23,26 @@ params:
       url: "https://github.com/adrimus"
     - name: "Substack"
       url: "https://computerthings.substack.com/"
-    - name: "Microsoft"
-      url: "https://learn.microsoft.com/en-us/users/adrimus/transcript/v2y3gi21y8q0glm"
+    - name: "Discord"
+      url: "https://Discordapp.com/users/400729126656409613"
     - name: "Bluesky"
       url: "https://bsky.app/profile/adrimus.bsky.social"
 
 caches:
   images:
     dir: :cacheDir/images
+
+menu:
+  main:
+    - identifier: "Home"
+      name: "Home"
+      url: "/"
+      weight: 1
+    - identifier: "CV"
+      name: "CV"
+      url: "/cv"
+      weight: 3
+    - identifier: "Posts"
+      name: "Posts"
+      url: "/posts"
+      weight: 2
