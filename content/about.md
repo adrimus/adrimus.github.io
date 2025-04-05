@@ -23,7 +23,7 @@ I'm a Systems Administrator with a passion for automation and PowerShell. By day
 
 ### Gaming Life
 
-Speaking of gaming, I'm particularly fond of Xcom. It's my way of unwinding after a day of scripting and troubleshooting. There's something satisfying about conquering both technical challenges at work and virtual challenges in games.
+Speaking of gaming, I'm particularly fond of Xcom, Sonic the Hedgehog, Infamous, Batman: Arkham Trilogy and Spiderman games. It's my way of unwinding after a day of scripting and troubleshooting. There's something satisfying about conquering both technical challenges at work and virtual challenges in games. Lately I have less time and I have been enjoying Teenage Mutant Ninja Turtles: Shredder's Revenge.
 
 ### Let's Connect
 
