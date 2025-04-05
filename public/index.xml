@@ -6,21 +6,21 @@
     <description>Recent content on Adrian Muscat</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://adrianmuscat.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Resources</title>
+      <link>https://adrianmuscat.com/posts/resources/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://adrianmuscat.com/posts/resources/</guid>
+      <description>A curated list of resources and books to help you in your tech career</description>
+    </item>
     <item>
       <title>About Me</title>
       <link>https://adrianmuscat.com/about/</link>
       <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://adrianmuscat.com/about/</guid>
       <description>Learn more about who I am and what I do</description>
-    </item>
-    <item>
-      <title>Adrian Muscat - IT Professional</title>
-      <link>https://adrianmuscat.com/cv/</link>
-      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://adrianmuscat.com/cv/</guid>
-      <description>System Administrator with expertise in PowerShell automation and cloud technologies</description>
     </item>
   </channel>
 </rss>

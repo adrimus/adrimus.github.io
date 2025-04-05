@@ -6,7 +6,14 @@
     <description>Recent content in Posts on Adrian Muscat</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 01 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://adrianmuscat.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Resources</title>
+      <link>https://adrianmuscat.com/posts/resources/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://adrianmuscat.com/posts/resources/</guid>
+      <description>A curated list of resources and books to help you in your tech career</description>
+    </item>
   </channel>
 </rss>
