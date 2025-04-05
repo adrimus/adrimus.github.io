@@ -45,6 +45,10 @@ params:
 - **[John Savill's YouTube Channel](https://www.youtube.com/user/NTFAQGuy)**  
   A great resource for learning PowerShell and other IT topics through video tutorials.
 
+- **[Jeremy's IT Lab](https://www.youtube.com/@JeremysITLab)**   
+  Learn about Cisco networking, and networking in general
+
+
 ## Communities
 - **[PowerShell Discord](https://discord.gg/powershell)**  
   Join the PowerShell community on Discord to ask questions and share knowledge.
