@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Adrian Muscat</title>
-    <link>https://adrianmuscat.com/posts/</link>
-    <description>Recent content in Posts on Adrian Muscat</description>
+    <title>Azure on Adrian Muscat</title>
+    <link>https://adrianmuscat.com/tags/azure/</link>
+    <description>Recent content in Azure on Adrian Muscat</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adrianmuscat.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adrianmuscat.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔐 Assigning API Permissions to Managed Identities in Azure</title>
       <link>https://adrianmuscat.com/posts/apipermissions/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://adrianmuscat.com/posts/apipermissions/</guid>
       <description>A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.</description>
-    </item>
-    <item>
-      <title>Learning Resources</title>
-      <link>https://adrianmuscat.com/posts/resources/</link>
-      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://adrianmuscat.com/posts/resources/</guid>
-      <description>A curated list of resources and books to help you in your tech career</description>
     </item>
   </channel>
 </rss>

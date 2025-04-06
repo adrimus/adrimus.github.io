@@ -2,13 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adrianmuscat.com/</loc>
-    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
+    <loc>https://adrianmuscat.com/posts/apipermissions/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adrianmuscat.com/posts/resources/</loc>
-    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
+    <loc>https://adrianmuscat.com/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/tags/api-permissions/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/tags/azure/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/tags/managed-identities/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/tags/microsoft-graph/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianmuscat.com/posts/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/tags/powershell/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/tags/</loc>
+    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/posts/resources/</loc>
     <lastmod>2025-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianmuscat.com/about/</loc>
@@ -17,7 +38,5 @@
     <loc>https://adrianmuscat.com/archives/</loc>
   </url><url>
     <loc>https://adrianmuscat.com/categories/</loc>
-  </url><url>
-    <loc>https://adrianmuscat.com/tags/</loc>
   </url>
 </urlset>

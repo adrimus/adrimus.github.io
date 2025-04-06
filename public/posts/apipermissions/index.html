@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>🔐 Assigning API Permissions to Managed Identities in Azure | Adrian Muscat</title>
+<meta name="keywords" content="azure, powershell, managed identities, microsoft graph, api permissions">
+<meta name="description" content="A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.">
+<meta name="author" content="">
+<link rel="canonical" href="https://adrianmuscat.com/posts/apipermissions/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://adrianmuscat.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://adrianmuscat.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://adrianmuscat.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://adrianmuscat.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://adrianmuscat.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://adrianmuscat.com/posts/apipermissions/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://adrianmuscat.com/posts/apipermissions/">
+  <meta property="og:site_name" content="Adrian Muscat">
+  <meta property="og:title" content="🔐 Assigning API Permissions to Managed Identities in Azure">
+  <meta property="og:description" content="A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-06T00:00:00+00:00">
+    <meta property="article:tag" content="Azure">
+    <meta property="article:tag" content="Powershell">
+    <meta property="article:tag" content="Managed Identities">
+    <meta property="article:tag" content="Microsoft Graph">
+    <meta property="article:tag" content="Api Permissions">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="🔐 Assigning API Permissions to Managed Identities in Azure">
+<meta name="twitter:description" content="A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://adrianmuscat.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "🔐 Assigning API Permissions to Managed Identities in Azure",
+      "item": "https://adrianmuscat.com/posts/apipermissions/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "🔐 Assigning API Permissions to Managed Identities in Azure",
+  "name": "🔐 Assigning API Permissions to Managed Identities in Azure",
+  "description": "A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.",
+  "keywords": [
+    "azure", "powershell", "managed identities", "microsoft graph", "api permissions"
+  ],
+  "articleBody": "If you’re using Azure Managed Identities and want to assign Microsoft Graph API permissions — here’s how to do it securely using PowerShell. No secrets. No manual portal work. Just automation and the principle of least privilege.\n🧩 Step 1: Connect to Microsoft Graph Connect-MgGraph -DeviceCode -Scopes \"AppRoleAssignment.ReadWrite.All\", \"Application.Read.All\" What it does:\nAuthenticates your session to Microsoft Graph with the right scopes to read and assign app roles.\n💡 You’ll be prompted with a device code login.\n🧩 Step 2: Find the Managed Identity’s Service Principal Get-MgServicePrincipal -Filter \"startswith(DisplayName, 'func')\" What it does:\nFetches the service principal for your Azure Function (or other resource) by partial name.\n✅ Pro tip: Use the Object ID (not the App ID).\n👉 Alternative method: You can also find the service principal in the Azure Portal:\nGo to Azure Active Directory \u003e Enterprise Applications Click + New application and select Managed Identities from the drop-down under Application type. Find and select your resource (like a Function App or VM) to view its service principal. 🧩 Step 3: Store the Managed Identity in a Variable $msi = Get-MgServicePrincipal -ServicePrincipalId \"\" What it does:\nRetrieves and stores the full service principal object for your managed identity.\n🧩 Step 4: Define the Permissions You Want to Assign $myPermissions = @( \"DeviceManagementConfiguration.Read.All\" \"Mail.Send\" ) What it does:\nCreates an array of permission values you want to assign from Microsoft Graph.\n🧩 Step 5: Get the Microsoft Graph API’s Service Principal $graph = Get-MgServicePrincipal -Filter \"AppId eq '00000003-0000-0000-c000-000000000000'\" What it does:\nGets the Microsoft Graph service principal object, which holds all available roles (permissions).\n🧩 Step 6: Loop Over Your Desired Permissions and Assign Them foreach ($myPerm in $myPermissions) { # find the permission in the graph service principal $permission = $graph.AppRoles | Where-Object Value -Like $myPerm | Select-Object -First 1 # if permission found, apply it to the MSI if ($permission) { $appRoleAssignmentParams = @{ ServicePrincipalId = $msi.Id AppRoleId = $permission.Id PrincipalId = $msi.Id ResourceId = $graph.Id } New-MgServicePrincipalAppRoleAssignment @appRoleAssignmentParams -Confirm } } What it does:\nLoops through each desired permission. Looks up the permission in Microsoft Graph’s app roles. Builds the assignment with: PrincipalId: who gets the role (your MSI) AppRoleId: what permission to assign ResourceId: the app offering the permission (Graph) Assigns the app role using New-MgServicePrincipalAppRoleAssignment. 🚨 Gotcha Alert: Always include ServicePrincipalId. Omitting it may trigger unexpected prompts or errors.\n✅ Done! Now your managed identity has just the permissions it needs — no secrets, no overprovisioning. 😎\nWant more tips like this? Share your questions or lessons in the comments!\n",
+  "wordCount" : "426",
+  "inLanguage": "en",
+  "datePublished": "2025-04-06T00:00:00Z",
+  "dateModified": "2025-04-06T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://adrianmuscat.com/posts/apipermissions/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adrian Muscat",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://adrianmuscat.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://adrianmuscat.com/" accesskey="h" title="Adrian Muscat (Alt + H)">Adrian Muscat</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://adrianmuscat.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://adrianmuscat.com/about/" title="About Me">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://adrianmuscat.com/posts" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      🔐 Assigning API Permissions to Managed Identities in Azure
+    </h1>
+    <div class="post-description">
+      A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.
+    </div>
+    <div class="post-meta"><span title='2025-04-06 00:00:00 +0000 UTC'>April 6, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>If you&rsquo;re using Azure Managed Identities and want to assign Microsoft Graph API permissions — here&rsquo;s how to do it <em>securely</em> using PowerShell. No secrets. No manual portal work. Just automation and the principle of least privilege.</p>
+<hr>
+<h2 id="-step-1-connect-to-microsoft-graph">🧩 Step 1: Connect to Microsoft Graph<a hidden class="anchor" aria-hidden="true" href="#-step-1-connect-to-microsoft-graph">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Connect-MgGraph -DeviceCode -Scopes <span style="color:#e6db74">&#34;AppRoleAssignment.ReadWrite.All&#34;</span>, <span style="color:#e6db74">&#34;Application.Read.All&#34;</span>
+</span></span></code></pre></div><p><strong>What it does:</strong><br>
+Authenticates your session to Microsoft Graph with the right scopes to <strong>read and assign app roles</strong>.<br>
+💡 You’ll be prompted with a device code login.</p>
+<hr>
+<h2 id="-step-2-find-the-managed-identitys-service-principal">🧩 Step 2: Find the Managed Identity’s Service Principal<a hidden class="anchor" aria-hidden="true" href="#-step-2-find-the-managed-identitys-service-principal">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-MgServicePrincipal -Filter <span style="color:#e6db74">&#34;startswith(DisplayName, &#39;func&#39;)&#34;</span>
+</span></span></code></pre></div><p><strong>What it does:</strong><br>
+Fetches the service principal for your Azure Function (or other resource) by partial name.<br>
+✅ <em>Pro tip:</em> Use the <strong>Object ID</strong> (not the App ID).</p>
+<p>👉 <strong>Alternative method:</strong> You can also find the service principal in the <strong>Azure Portal</strong>:</p>
+<ol>
+<li>Go to <strong>Azure Active Directory &gt; Enterprise Applications</strong></li>
+<li>Click <strong>+ New application</strong> and select <strong>Managed Identities</strong> from the drop-down under <em>Application type</em>.</li>
+<li>Find and select your resource (like a Function App or VM) to view its service principal.</li>
+</ol>
+<p><img alt="Application Type Menu" loading="lazy" src="/image.png"></p>
+<hr>
+<h2 id="-step-3-store-the-managed-identity-in-a-variable">🧩 Step 3: Store the Managed Identity in a Variable<a hidden class="anchor" aria-hidden="true" href="#-step-3-store-the-managed-identity-in-a-variable">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$msi = Get-MgServicePrincipal -ServicePrincipalId <span style="color:#e6db74">&#34;&lt;service_principal_id&gt;&#34;</span>
+</span></span></code></pre></div><p><strong>What it does:</strong><br>
+Retrieves and stores the full service principal object for your managed identity.</p>
+<hr>
+<h2 id="-step-4-define-the-permissions-you-want-to-assign">🧩 Step 4: Define the Permissions You Want to Assign<a hidden class="anchor" aria-hidden="true" href="#-step-4-define-the-permissions-you-want-to-assign">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$myPermissions = @(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;DeviceManagementConfiguration.Read.All&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Mail.Send&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>What it does:</strong><br>
+Creates an array of permission <strong>values</strong> you want to assign from Microsoft Graph.</p>
+<hr>
+<h2 id="-step-5-get-the-microsoft-graph-apis-service-principal">🧩 Step 5: Get the Microsoft Graph API’s Service Principal<a hidden class="anchor" aria-hidden="true" href="#-step-5-get-the-microsoft-graph-apis-service-principal">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$graph = Get-MgServicePrincipal -Filter <span style="color:#e6db74">&#34;AppId eq &#39;00000003-0000-0000-c000-000000000000&#39;&#34;</span>
+</span></span></code></pre></div><p><strong>What it does:</strong><br>
+Gets the Microsoft Graph service principal object, which holds all available roles (permissions).</p>
+<hr>
+<h2 id="-step-6-loop-over-your-desired-permissions-and-assign-them">🧩 Step 6: Loop Over Your Desired Permissions and Assign Them<a hidden class="anchor" aria-hidden="true" href="#-step-6-loop-over-your-desired-permissions-and-assign-them">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($myPerm <span style="color:#66d9ef">in</span> $myPermissions) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># find the permission in the graph service principal</span>
+</span></span><span style="display:flex;"><span>    $permission = $graph.AppRoles | 
+</span></span><span style="display:flex;"><span>        Where-Object Value <span style="color:#f92672">-Like</span> $myPerm | 
+</span></span><span style="display:flex;"><span>        Select-Object -First <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># if permission found, apply it to the MSI</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($permission) {
+</span></span><span style="display:flex;"><span>        $appRoleAssignmentParams = @{
+</span></span><span style="display:flex;"><span>            ServicePrincipalId = $msi.Id
+</span></span><span style="display:flex;"><span>            AppRoleId          = $permission.Id
+</span></span><span style="display:flex;"><span>            PrincipalId        = $msi.Id
+</span></span><span style="display:flex;"><span>            ResourceId         = $graph.Id
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        New-MgServicePrincipalAppRoleAssignment @appRoleAssignmentParams -Confirm
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>What it does:</strong></p>
+<ul>
+<li>Loops through each desired permission.</li>
+<li>Looks up the permission in Microsoft Graph’s app roles.</li>
+<li>Builds the assignment with:
+<ul>
+<li><code>PrincipalId</code>: who gets the role (your MSI)</li>
+<li><code>AppRoleId</code>: what permission to assign</li>
+<li><code>ResourceId</code>: the app offering the permission (Graph)</li>
+</ul>
+</li>
+<li>Assigns the app role using <code>New-MgServicePrincipalAppRoleAssignment</code>.</li>
+</ul>
+<p>🚨 <strong>Gotcha Alert:</strong> Always include <code>ServicePrincipalId</code>. Omitting it may trigger unexpected prompts or errors.</p>
+<hr>
+<h2 id="-done">✅ Done!<a hidden class="anchor" aria-hidden="true" href="#-done">#</a></h2>
+<p>Now your managed identity has just the permissions it needs — no secrets, no overprovisioning. 😎</p>
+<p>Want more tips like this? Share your questions or lessons in the comments!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://adrianmuscat.com/tags/azure/">Azure</a></li>
+      <li><a href="https://adrianmuscat.com/tags/powershell/">Powershell</a></li>
+      <li><a href="https://adrianmuscat.com/tags/managed-identities/">Managed Identities</a></li>
+      <li><a href="https://adrianmuscat.com/tags/microsoft-graph/">Microsoft Graph</a></li>
+      <li><a href="https://adrianmuscat.com/tags/api-permissions/">Api Permissions</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://adrianmuscat.com/">Adrian Muscat</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
