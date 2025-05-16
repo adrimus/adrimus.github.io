@@ -29,7 +29,7 @@ Get-MgServicePrincipal -Filter "startswith(DisplayName, 'func')"
 ```
 
 **What it does:**  
-Fetches the service principal for your Azure Function (or other resource) by partial name.  
+Fetches the service principal for your Azure Function (or other resource) by partial name. I normally use a naming convention for Azure resources, it makes the service principal easy to find.   
 ✅ *Pro tip:* Use the **Object ID** (not the App ID).
 
 👉 **Alternative method:** You can also find the service principal in the **Azure Portal**:
@@ -117,5 +117,3 @@ foreach ($myPerm in $myPermissions) {
 ## ✅ Done!
 
 Now your managed identity has just the permissions it needs — no secrets, no overprovisioning. 😎
-
-Want more tips like this? Share your questions or lessons in the comments!
