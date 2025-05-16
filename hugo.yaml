@@ -5,17 +5,18 @@ theme: PaperMod
 
 params:
   # Profile mode
-  homeInfoParams:
+  profileMode:
     enabled: true
-    title: "Hello" # optional default will be site title
-    content: "Welcome to my page! I'm Adrian 👋🏼. I write about PowerShell, tech, and more. Check out my social links below to connect with me!"
-    #imageUrl: "/img/1A6A7989.jpg" # optionalC:\github\MySite\static\img\1A6A7989.jpg
-    #imageTitle: "Me title" # optional
-    #imageWidth: 120 # custom size
-    #imageHeight: 120 # custom size
-    #buttons:
-    #- name: CV
-    # url: "/cv"
+    title: "Hi, I'm Adrian Muscat" # optional default will be site title
+    subtitle: " 👋🏼. I write about PowerShell, tech, and more. Check out my social links below to connect with me!"
+    imageUrl: "image.png" # optional
+    imageTitle: "<title of image as alt>" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+    - name: My Blog
+      url: "https://computerthings.substack.com/"
+
   socialIcons: # optional
     - name: "LinkedIn"
       url: "https://www.linkedin.com/in/adrian-muscat-8a1b27170/"
