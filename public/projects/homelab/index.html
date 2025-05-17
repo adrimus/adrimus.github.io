@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Azure | Adrian Muscat</title>
+<meta name="robots" content="noindex, nofollow">
+<title>My Homelab: Proxmox &amp; Ansible Automation | Adrian Muscat</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently.
+Why Proxmox?
+
+Open-source and feature-rich virtualization platform
+Easy web-based management interface
+Supports both VMs and LXC containers
+Great community and documentation
+
+Automation with Ansible
+To keep my environment consistent and reproducible, I use Ansible for configuration management. With Ansible, I can:">
 <meta name="author" content="">
-<link rel="canonical" href="https://adrianmuscat.com/tags/azure/">
+<link rel="canonical" href="http://localhost:1313/projects/homelab/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://adrianmuscat.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://adrianmuscat.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://adrianmuscat.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://adrianmuscat.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://adrianmuscat.com/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://adrianmuscat.com/tags/azure/index.xml">
-<link rel="alternate" hreflang="en" href="https://adrianmuscat.com/tags/azure/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/homelab/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,18 +64,10 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://adrianmuscat.com/tags/azure/">
-  <meta property="og:site_name" content="Adrian Muscat">
-  <meta property="og:title" content="Azure">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Azure">
-<meta name="twitter:description" content="">
-
+</noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -82,7 +82,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://adrianmuscat.com/" accesskey="h" title="Adrian Muscat (Alt + H)">Adrian Muscat</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Adrian Muscat (Alt + H)">Adrian Muscat</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -108,54 +108,88 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://adrianmuscat.com/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://adrianmuscat.com/about/" title="About Me">
+                <a href="http://localhost:1313/about/" title="About Me">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="https://adrianmuscat.com/posts" title="Posts">
+                <a href="http://localhost:1313/posts" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://adrianmuscat.com/projects" title="Projects">
+                <a href="http://localhost:1313/projects" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Azure
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">🔐 Assigning API Permissions to Managed Identities in Azure
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>If you’re using Azure Managed Identities and want to assign Microsoft Graph API permissions — here’s how to do it securely using PowerShell. No secrets. No manual portal work. Just automation and the principle of least privilege.
-🧩 Step 1: Connect to Microsoft Graph Connect-MgGraph -DeviceCode -Scopes &#34;AppRoleAssignment.ReadWrite.All&#34;, &#34;Application.Read.All&#34; What it does:
-Authenticates your session to Microsoft Graph with the right scopes to read and assign app roles.
-💡 You’ll be prompted with a device code login.
-...</p>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      My Homelab: Proxmox &amp; Ansible Automation
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2025-05-17 07:18:22 +0200 CEST'>May 17, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is <strong>Proxmox VE</strong>, which allows me to manage virtual machines and containers efficiently.</p>
+<h2 id="why-proxmox">Why Proxmox?<a hidden class="anchor" aria-hidden="true" href="#why-proxmox">#</a></h2>
+<ul>
+<li>Open-source and feature-rich virtualization platform</li>
+<li>Easy web-based management interface</li>
+<li>Supports both VMs and LXC containers</li>
+<li>Great community and documentation</li>
+</ul>
+<h2 id="automation-with-ansible">Automation with Ansible<a hidden class="anchor" aria-hidden="true" href="#automation-with-ansible">#</a></h2>
+<p>To keep my environment consistent and reproducible, I use <strong>Ansible</strong> for configuration management. With Ansible, I can:</p>
+<ul>
+<li>Automate the provisioning of new servers and services</li>
+<li>Apply configuration changes across multiple machines</li>
+<li>Version-control my infrastructure as code</li>
+</ul>
+<h2 id="typical-workflow">Typical Workflow<a hidden class="anchor" aria-hidden="true" href="#typical-workflow">#</a></h2>
+<ol>
+<li><strong>Provision</strong> a new VM or container in Proxmox.</li>
+<li><strong>Configure</strong> the system using Ansible playbooks (install packages, set up users, deploy services).</li>
+<li><strong>Test</strong> and iterate on new technologies in a safe, isolated environment.</li>
+</ol>
+<h2 id="example-projects">Example Projects<a hidden class="anchor" aria-hidden="true" href="#example-projects">#</a></h2>
+<ul>
+<li>Automated deployment of web servers and monitoring tools</li>
+<li>Testing PowerShell scripts and Windows Server automation</li>
+<li>Experimenting with network configurations and VLANs</li>
+</ul>
+<hr>
+<p>If you’re interested in the details or want to see my Ansible playbooks and Proxmox templates, let me know!</p>
+
+
   </div>
-  <footer class="entry-footer"><span title='2025-04-06 00:00:00 +0000 UTC'>April 6, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 🔐 Assigning API Permissions to Managed Identities in Azure" href="https://adrianmuscat.com/posts/apipermissions/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://adrianmuscat.com/">Adrian Muscat</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Adrian Muscat</a></span> · 
 
     <span>
         Powered by

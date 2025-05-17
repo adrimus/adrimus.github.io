@@ -43,3 +43,7 @@ menu:
       name: "Posts"
       url: "/posts"
       weight: 2
+    - identifier: "Projects"
+      name: "Projects"
+      url: "/Projects"
+      weight: 3

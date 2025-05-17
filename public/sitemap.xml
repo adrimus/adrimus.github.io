@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adrianmuscat.com/posts/apipermissions/</loc>
-    <lastmod>2025-04-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://adrianmuscat.com/</loc>
+    <lastmod>2025-05-17T07:18:22+02:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/posts/apipermissions/</loc>
     <lastmod>2025-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianmuscat.com/tags/api-permissions/</loc>
@@ -34,6 +34,9 @@
   </url><url>
     <loc>https://adrianmuscat.com/about/</loc>
     <lastmod>2025-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adrianmuscat.com/projects/</loc>
+    <lastmod>2024-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adrianmuscat.com/archives/</loc>
   </url><url>
