@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>My Homelab: Proxmox &amp; Ansible Automation | Adrian Muscat</title>
 <meta name="keywords" content="">
-<meta name="description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently.
-Why Proxmox?
-
-Open-source and feature-rich virtualization platform
-Easy web-based management interface
-Supports both VMs and LXC containers
-Great community and documentation
-
-Automation with Ansible
-To keep my environment consistent and reproducible, I use Ansible for configuration management. With Ansible, I can:">
+<meta name="description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I&rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/projects/homelab/">
+<link rel="canonical" href="https://adrianmuscat.com/projects/homelab/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://adrianmuscat.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://adrianmuscat.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://adrianmuscat.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://adrianmuscat.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://adrianmuscat.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/homelab/">
+<link rel="alternate" hreflang="en" href="https://adrianmuscat.com/projects/homelab/">
 <noscript>
     <style>
         #theme-toggle,
@@ -64,7 +55,69 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://adrianmuscat.com/projects/homelab/">
+  <meta property="og:site_name" content="Adrian Muscat">
+  <meta property="og:title" content="My Homelab: Proxmox & Ansible Automation">
+  <meta property="og:description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I’ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-05-17T07:18:22+02:00">
+    <meta property="article:modified_time" content="2025-05-17T07:18:22+02:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My Homelab: Proxmox &amp; Ansible Automation">
+<meta name="twitter:description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I&rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://adrianmuscat.com/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "My Homelab: Proxmox \u0026 Ansible Automation",
+      "item": "https://adrianmuscat.com/projects/homelab/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My Homelab: Proxmox \u0026 Ansible Automation",
+  "name": "My Homelab: Proxmox \u0026 Ansible Automation",
+  "description": "I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I\u0026rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I’ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.\nWhat I use my homelab for Learning: I use my homelab to learn new technologies, test software, and practice skills. Docker: I run Docker containers for various applications, DNS servers, Twingate connectors, and more. Windows Servers: I have a few Windows Server VMs for testing with Active Directory, Group Policy, and other Windows features. I also use this to test PowerShell Universal. Why Proxmox? Open-source and feature-rich virtualization platform Easy web-based management interface Supports both VMs and LXC containers Great community and documentation Typical Workflow Provision a new VM or container in Proxmox. Configure the system using Ansible playbooks (install packages, set up users, deploy services). Test and iterate on new technologies in a safe, isolated environment. Source Code You can find my Ansible playbooks and Proxmox automation scripts in this GitHub repository:\nadrimus/ansible-proxmox-homelab\nI also have a repo for my Pi-hole setup: adrimus/pihole\nResources Here are some resources I’ve used to study and learn about Proxmox, Ansible, and homelab automation:\nDive into Ansible Become Ansible Proxmox VE Documentation Ansible Documentation YouTube channels: NetworkChuck, Techno Tim ",
+  "wordCount" : "271",
+  "inLanguage": "en",
+  "datePublished": "2025-05-17T07:18:22+02:00",
+  "dateModified": "2025-05-17T07:18:22+02:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://adrianmuscat.com/projects/homelab/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adrian Muscat",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://adrianmuscat.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -82,7 +135,7 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Adrian Muscat (Alt + H)">Adrian Muscat</a>
+            <a href="https://adrianmuscat.com/" accesskey="h" title="Adrian Muscat (Alt + H)">Adrian Muscat</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -108,22 +161,22 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://adrianmuscat.com/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About Me">
+                <a href="https://adrianmuscat.com/about/" title="About Me">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts" title="Posts">
+                <a href="https://adrianmuscat.com/posts" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/projects" title="Projects">
+                <a href="https://adrianmuscat.com/projects" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
@@ -137,18 +190,18 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
     
     <h1 class="post-title entry-hint-parent">
       My Homelab: Proxmox &amp; Ansible Automation
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h1>
     <div class="post-meta"><span title='2025-05-17 07:18:22 +0200 CEST'>May 17, 2025</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is <strong>Proxmox VE</strong>, which allows me to manage virtual machines and containers efficiently.</p>
+  <div class="post-content"><p>I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is <strong>Proxmox VE</strong>, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I&rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.</p>
+<h2 id="what-i-use-my-homelab-for">What I use my homelab for<a hidden class="anchor" aria-hidden="true" href="#what-i-use-my-homelab-for">#</a></h2>
+<ul>
+<li><strong>Learning</strong>: I use my homelab to learn new technologies, test software, and practice skills.</li>
+<li><strong>Docker</strong>: I run Docker containers for various applications, DNS servers, Twingate connectors, and more.</li>
+<li><strong>Windows Servers</strong>: I have a few Windows Server VMs for testing with Active Directory, Group Policy, and other Windows features. I also use this to test <a href="https://powershelluniversal.com">PowerShell Universal</a>.</li>
+</ul>
 <h2 id="why-proxmox">Why Proxmox?<a hidden class="anchor" aria-hidden="true" href="#why-proxmox">#</a></h2>
 <ul>
 <li>Open-source and feature-rich virtualization platform</li>
@@ -156,27 +209,26 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
 <li>Supports both VMs and LXC containers</li>
 <li>Great community and documentation</li>
 </ul>
-<h2 id="automation-with-ansible">Automation with Ansible<a hidden class="anchor" aria-hidden="true" href="#automation-with-ansible">#</a></h2>
-<p>To keep my environment consistent and reproducible, I use <strong>Ansible</strong> for configuration management. With Ansible, I can:</p>
-<ul>
-<li>Automate the provisioning of new servers and services</li>
-<li>Apply configuration changes across multiple machines</li>
-<li>Version-control my infrastructure as code</li>
-</ul>
 <h2 id="typical-workflow">Typical Workflow<a hidden class="anchor" aria-hidden="true" href="#typical-workflow">#</a></h2>
 <ol>
 <li><strong>Provision</strong> a new VM or container in Proxmox.</li>
 <li><strong>Configure</strong> the system using Ansible playbooks (install packages, set up users, deploy services).</li>
 <li><strong>Test</strong> and iterate on new technologies in a safe, isolated environment.</li>
 </ol>
-<h2 id="example-projects">Example Projects<a hidden class="anchor" aria-hidden="true" href="#example-projects">#</a></h2>
+<h2 id="source-code">Source Code<a hidden class="anchor" aria-hidden="true" href="#source-code">#</a></h2>
+<p>You can find my Ansible playbooks and Proxmox automation scripts in this GitHub repository:<br>
+<a href="https://github.com/adrimus/ansible-proxmox-homelab">adrimus/ansible-proxmox-homelab</a></p>
+<p>I also have a repo for my Pi-hole setup:
+<a href="https://github.com/adrimus/pihole">adrimus/pihole</a></p>
+<h2 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h2>
+<p>Here are some resources I’ve used to study and learn about Proxmox, Ansible, and homelab automation:</p>
 <ul>
-<li>Automated deployment of web servers and monitoring tools</li>
-<li>Testing PowerShell scripts and Windows Server automation</li>
-<li>Experimenting with network configurations and VLANs</li>
+<li><a href="https://www.udemy.com/course/diveintoansible/">Dive into Ansible</a></li>
+<li><a href="https://joshduffney.gumroad.com/l/become-ansible">Become Ansible </a></li>
+<li><a href="https://pve.proxmox.com/wiki/Main_Page">Proxmox VE Documentation</a></li>
+<li><a href="https://docs.ansible.com/">Ansible Documentation</a></li>
+<li>YouTube channels: NetworkChuck, Techno Tim</li>
 </ul>
-<hr>
-<p>If you’re interested in the details or want to see my Ansible playbooks and Proxmox templates, let me know!</p>
 
 
   </div>
@@ -189,7 +241,7 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Adrian Muscat</a></span> · 
+        <span>&copy; 2025 <a href="https://adrianmuscat.com/">Adrian Muscat</a></span> · 
 
     <span>
         Powered by
