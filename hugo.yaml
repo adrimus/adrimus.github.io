@@ -7,12 +7,10 @@ params:
   # Profile mode
   profileMode:
     enabled: true
-    title: "Hi, I'm Adrian Muscat" # optional default will be site title
-    subtitle: " 👋🏼. I write about PowerShell, tech, and more. Check out my social links below to connect with me!"
-    imageUrl: "image.png" # optional
-    imageTitle: "<title of image as alt>" # optional
-    imageWidth: 120 # custom size
-    imageHeight: 120 # custom size
+    title: "Hi, I'm Adrian Muscat 👋🏼" # optional default will be site title
+    subtitle: "I write about PowerShell, tech, and more. Check out my social links below to connect with me!"
+    imageUrl: "coverphoto.jpg" # optional
+    imageTitle: "Me and my kids" # optional
     buttons:
     - name: My Blog
       url: "https://computerthings.substack.com/"
