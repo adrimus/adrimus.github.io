@@ -7,16 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>My Homelab: Proxmox &amp; Ansible Automation | Adrian Muscat</title>
 <meta name="keywords" content="">
-<meta name="description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently.
-Why Proxmox?
-
-Open-source and feature-rich virtualization platform
-Easy web-based management interface
-Supports both VMs and LXC containers
-Great community and documentation
-
-Automation with Ansible
-To keep my environment consistent and reproducible, I use Ansible for configuration management. With Ansible, I can:">
+<meta name="description" content="I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is Proxmox VE, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I&rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/projects/homelab/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.6da9a63d25a9608bca2f7f907a030e887a7dd3c3f3918e4cc113129361414bda.css" integrity="sha256-bammPSWpYIvKL3&#43;QegMOiHp908PzkY5MwRMSk2FBS9o=" rel="preload stylesheet" as="style">
@@ -148,7 +139,13 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
 
 </div>
   </header> 
-  <div class="post-content"><p>I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is <strong>Proxmox VE</strong>, which allows me to manage virtual machines and containers efficiently.</p>
+  <div class="post-content"><p>I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is <strong>Proxmox VE</strong>, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I&rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.</p>
+<h2 id="what-i-use-my-homelab-for">What I use my homelab for<a hidden class="anchor" aria-hidden="true" href="#what-i-use-my-homelab-for">#</a></h2>
+<ul>
+<li><strong>Learning</strong>: I use my homelab to learn new technologies, test software, and practice skills.</li>
+<li><strong>Docker</strong>: I run Docker containers for various applications, DNS servers, Twingate connectors, and more.</li>
+<li><strong>Windows Servers</strong>: I have a few Windows Server VMs for testing with Active Directory, Group Policy, and other Windows features. I also use this to test <a href="https://powershelluniversal.com">PowerShell Universal</a>.</li>
+</ul>
 <h2 id="why-proxmox">Why Proxmox?<a hidden class="anchor" aria-hidden="true" href="#why-proxmox">#</a></h2>
 <ul>
 <li>Open-source and feature-rich virtualization platform</li>
@@ -156,27 +153,26 @@ To keep my environment consistent and reproducible, I use Ansible for configurat
 <li>Supports both VMs and LXC containers</li>
 <li>Great community and documentation</li>
 </ul>
-<h2 id="automation-with-ansible">Automation with Ansible<a hidden class="anchor" aria-hidden="true" href="#automation-with-ansible">#</a></h2>
-<p>To keep my environment consistent and reproducible, I use <strong>Ansible</strong> for configuration management. With Ansible, I can:</p>
-<ul>
-<li>Automate the provisioning of new servers and services</li>
-<li>Apply configuration changes across multiple machines</li>
-<li>Version-control my infrastructure as code</li>
-</ul>
 <h2 id="typical-workflow">Typical Workflow<a hidden class="anchor" aria-hidden="true" href="#typical-workflow">#</a></h2>
 <ol>
 <li><strong>Provision</strong> a new VM or container in Proxmox.</li>
 <li><strong>Configure</strong> the system using Ansible playbooks (install packages, set up users, deploy services).</li>
 <li><strong>Test</strong> and iterate on new technologies in a safe, isolated environment.</li>
 </ol>
-<h2 id="example-projects">Example Projects<a hidden class="anchor" aria-hidden="true" href="#example-projects">#</a></h2>
+<h2 id="source-code">Source Code<a hidden class="anchor" aria-hidden="true" href="#source-code">#</a></h2>
+<p>You can find my Ansible playbooks and Proxmox automation scripts in this GitHub repository:<br>
+<a href="https://github.com/adrimus/ansible-proxmox-homelab">adrimus/ansible-proxmox-homelab</a></p>
+<p>I also have a repo for my Pi-hole setup:
+<a href="https://github.com/adrimus/pihole">adrimus/pihole</a></p>
+<h2 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h2>
+<p>Here are some resources I’ve used to study and learn about Proxmox, Ansible, and homelab automation:</p>
 <ul>
-<li>Automated deployment of web servers and monitoring tools</li>
-<li>Testing PowerShell scripts and Windows Server automation</li>
-<li>Experimenting with network configurations and VLANs</li>
+<li><a href="https://www.udemy.com/course/diveintoansible/">Dive into Ansible</a></li>
+<li><a href="https://joshduffney.gumroad.com/l/become-ansible">Become Ansible </a></li>
+<li><a href="https://pve.proxmox.com/wiki/Main_Page">Proxmox VE Documentation</a></li>
+<li><a href="https://docs.ansible.com/">Ansible Documentation</a></li>
+<li>YouTube channels: NetworkChuck, Techno Tim</li>
 </ul>
-<hr>
-<p>If you’re interested in the details or want to see my Ansible playbooks and Proxmox templates, let me know!</p>
 
 
   </div>
