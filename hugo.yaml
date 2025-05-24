@@ -26,6 +26,8 @@ params:
       url: "https://Discordapp.com/users/400729126656409613"
     - name: "Bluesky"
       url: "https://bsky.app/profile/adrimus.bsky.social"
+    - name: "xda"
+      url: "https://www.xda-developers.com/profile/JM584958/"
 
 caches:
   images:
