@@ -14,6 +14,8 @@ params:
     buttons:
     - name: My Blog
       url: "https://computerthings.substack.com/"
+    assets:
+      favicon: "favicon.ico"
 
   socialIcons: # optional
     - name: "LinkedIn"
@@ -47,3 +49,5 @@ menu:
       name: "Projects"
       url: "/Projects"
       weight: 3
+
+
