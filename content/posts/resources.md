@@ -24,6 +24,9 @@ params:
 - **[The PowerShell Conference Book](https://leanpub.com/powershell-conference-book)**  
   A collection of PowerShell tips and techniques from experts in the field.
 
+- **[PowerShell 101](https://leanpub.com/powershell101)**  
+  A beginner's guide to PowerShell, covering the basics and essential concepts.
+  
 ## Other tech Books
 - **[How to Find a Wolf in Siberia or, How to Troubleshoot Practically Anything](https://leanpub.com/troubleshooting)** 
   A concise, practical methodology to becoming a better troubleshooter for practically anything
@@ -34,6 +37,9 @@ params:
 
 - **[Tiny PowerShell Projects](https://github.com/dfinke/Tiny-PowerShell-Projects)**  
   Learning PowerShell through test-driven development of games and puzzles
+
+- **[Codecademy - Learn PowerShell - ](https://www.codecademy.com/enrolled/courses/learn-powershell)**  
+  Free interactive course to learn the basics of PowerShell scripting.
 
 ## Online Resources
 - **[Microsoft PowerShell Documentation](https://learn.microsoft.com/en-us/powershell/)**  
