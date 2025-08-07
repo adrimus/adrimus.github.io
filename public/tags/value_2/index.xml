@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Adrian Muscat</title>
-    <link>https://adrianmuscat.com/posts/</link>
-    <description>Recent content in Posts on Adrian Muscat</description>
+    <title>Value_2 on Adrian Muscat</title>
+    <link>https://adrianmuscat.com/tags/value_2/</link>
+    <description>Recent content in Value_2 on Adrian Muscat</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Jun 2025 18:09:09 +0200</lastBuildDate>
-    <atom:link href="https://adrianmuscat.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://adrianmuscat.com/tags/value_2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Growth Mindset</title>
       <link>https://adrianmuscat.com/posts/growthmindset/</link>
@@ -24,20 +24,6 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;external-influences&#34;&gt;External Influences&lt;/h1&gt;
 &lt;p&gt;I remember when I was about 11 years old I made many mistakes playing football in the street with my friends. I was not very good at it, but I loved the game. One of my best friends said that I was really bad at it. That didn&amp;rsquo;t stop me from playing, but it was comments like that which could have discouraged me and unconsciously made me have a fixed mindset when I encountered difficulty at something. Instead, I kept playing and practicing, and eventually I got better. This experience taught me that external influences can shape our mindset, but we have the power to choose how we respond to them.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>🔐 Assigning API Permissions to Managed Identities in Azure</title>
-      <link>https://adrianmuscat.com/posts/apipermissions/</link>
-      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://adrianmuscat.com/posts/apipermissions/</guid>
-      <description>A step-by-step PowerShell guide for assigning Microsoft Graph permissions to Azure managed identities.</description>
-    </item>
-    <item>
-      <title>Learning Resources</title>
-      <link>https://adrianmuscat.com/posts/resources/</link>
-      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://adrianmuscat.com/posts/resources/</guid>
-      <description>A curated list of resources and books to help you in your tech career</description>
     </item>
   </channel>
 </rss>
