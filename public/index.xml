@@ -6,8 +6,26 @@
     <description>Recent content on Adrian Muscat</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 May 2025 07:18:22 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jun 2025 18:09:09 +0200</lastBuildDate>
     <atom:link href="https://adrianmuscat.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Growthmindset</title>
+      <link>https://adrianmuscat.com/posts/growthmindset/</link>
+      <pubDate>Sun, 29 Jun 2025 18:09:09 +0200</pubDate>
+      <guid>https://adrianmuscat.com/posts/growthmindset/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I recently completed a course for assistant managers and learned about something called a “growth mindset.” Turns out, I’ve had one all along—I just didn’t know it had a name.&lt;/p&gt;
+&lt;h2 id=&#34;lessons-that-stuck&#34;&gt;Lessons That Stuck&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Challenges = growth.&lt;/li&gt;
+&lt;li&gt;Feedback isn’t personal—it’s fuel.&lt;/li&gt;
+&lt;li&gt;Skills improve with effort and repetition.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;growth-as-a-continuous-process&#34;&gt;Growth as a Continuous Process&lt;/h1&gt;
+&lt;p&gt;Repitition leads to improvement and failure is the path to success not the opposite.&lt;/p&gt;
+&lt;h1 id=&#34;external-influences&#34;&gt;External Influences&lt;/h1&gt;
+&lt;p&gt;I remember when I was about 11 years old I made many mistakes playing football in the street with my friends. I was not very good at it, but I loved the game. One of my best friends said that I was really bad at it. That didn&amp;rsquo;t stop me from playing, but it was comments like that which could have discouraged me and unconsciously made me have a fixed mindset when I encountered difficulty at something. Instead, I kept playing and practicing, and eventually I got better. This experience taught me that external influences can shape our mindset, but we have the power to choose how we respond to them.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My Homelab: Proxmox &amp; Ansible Automation</title>
       <link>https://adrianmuscat.com/projects/homelab/</link>
