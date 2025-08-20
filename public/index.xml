@@ -33,6 +33,15 @@
       <description>&lt;p&gt;I run a homelab environment to experiment with virtualization, automation, and IT infrastructure. My main hypervisor is &lt;strong&gt;Proxmox VE&lt;/strong&gt;, which allows me to manage virtual machines and containers efficiently. I have been trying to improve my skills with Ansible and wanted to apply what I&amp;rsquo;ve learned in my homelab. This is also a good way to document things that I normally do when I create VMs like installing the QEMU agent and creating new users on them and it helps me to automate the process of creating new VMs and containers when I need them.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>🛠️ Automating Sophos Uninstall Across Hundreds of PCs—Without Disrupting Users</title>
+      <link>https://adrianmuscat.com/projects/endpoint-uninstall-automation/</link>
+      <pubDate>Sat, 17 May 2025 07:18:22 +0200</pubDate>
+      <guid>https://adrianmuscat.com/projects/endpoint-uninstall-automation/</guid>
+      <description>&lt;p&gt;Migrating from Sophos to Defender for Endpoint came with a major challenge: tamper protection. To tackle it, I built a PowerShell module that interacts with the &lt;a href=&#34;https://developer.sophos.com/docs/endpoint-v1/1/overview&#34;&gt;Sophos Central API&lt;/a&gt; to disable tamper protection remotely. You can check it out on &lt;a href=&#34;https://github.com/adrimus/pssophoscentral&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;This setup saved countless hours, avoided manual intervention, and kept users blissfully unaware—just the way it should be. If you’re facing a similar migration, feel free to explore or fork the modules, I didn&amp;rsquo;t get a chance to finish the module and did not include all the necessary components like paging as I didn&amp;rsquo;t have to deal with more than 200 endpoints. Always happy to connect with others tackling endpoint automation!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>🔐 Assigning API Permissions to Managed Identities in Azure</title>
       <link>https://adrianmuscat.com/posts/apipermissions/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
