@@ -42,6 +42,13 @@
 &lt;p&gt;This setup saved countless hours, avoided manual intervention, and kept users blissfully unaware—just the way it should be. If you’re facing a similar migration, feel free to explore or fork the modules, I didn&amp;rsquo;t get a chance to finish the module and did not include all the necessary components like paging as I didn&amp;rsquo;t have to deal with more than 200 endpoints. Always happy to connect with others tackling endpoint automation!&lt;/p&gt;</description>
     </item>
     <item>
+      <title>PowerShell Tools &amp; Scripts</title>
+      <link>https://adrianmuscat.com/projects/pstools/</link>
+      <pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://adrianmuscat.com/projects/pstools/</guid>
+      <description>A collection of PowerShell tools and scripts I have developed for various tasks.</description>
+    </item>
+    <item>
       <title>🔐 Assigning API Permissions to Managed Identities in Azure</title>
       <link>https://adrianmuscat.com/posts/apipermissions/</link>
       <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
