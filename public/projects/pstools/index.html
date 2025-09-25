@@ -62,8 +62,8 @@
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
-    <meta property="article:published_time" content="2025-05-17T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-05-17T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-09-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-09-06T00:00:00+00:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PowerShell Tools &amp; Scripts">
 <meta name="twitter:description" content="A collection of PowerShell tools and scripts I have developed for various tasks.">
@@ -99,11 +99,11 @@
   "keywords": [
     
   ],
-  "articleBody": "Welcome to my collection of PowerShell tools and scripts. These are simple tools I’ve created with some System Administration tasks in mind. Feel free to explore, use, and modify them as needed.\nPSInfraTools A PowerShell module that provides random functions to manage and retrieve information about Windows systems. It includes functions to get Bitlocker keys from Active Directory, Disk usage, check backup status, User bad password attempts, and more.\nGitHub Repository\n",
-  "wordCount" : "71",
+  "articleBody": "Welcome to my collection of PowerShell tools and scripts. These are simple tools I’ve created with some System Administration tasks in mind. Feel free to explore, use, and modify them as needed.\nPSInfraTools A PowerShell module that provides random functions to manage and retrieve information about Windows systems. It includes functions to get Bitlocker keys from Active Directory, Disk usage, check backup status, User bad password attempts, and more.\nEven though the module is not completely finished, they have proven to be useful in my daily tasks. I plan to continue adding more functions and improving existing ones. I also experimented with using Gitversion to automatically version the module based on my git history and commit keywords. It was also an opportunity to use Github actions to build and test the functions. I used the Pester framework to write unit tests.\nGitHub Repository\nYou can find the functions under PS-InfraTools Public folder, Below is a rundown of each function and what they can be used for:\n🔐 Get-ADBitlockerRecoveryPwd.ps1 Retrieves BitLocker recovery keys from Active Directory.\nUse Cases:\nHelpdesk recovery during user lockouts Compliance audits for encrypted endpoints Automated reporting of missing recovery keys 👤 Get-ADUserBadPasswords.ps1 Identifies AD users with bad password attempts or lockouts.\nUse Cases:\nDetect brute-force attempts or compromised accounts Alerting for high-risk user behavior 💾 Get-BackupJobInfo.ps1 Checks status and metadata of backup jobs.\nUse Cases:\nDaily health checks of backup infrastructure Alerting on failed or incomplete jobs 💽 Get-DiskSizeInfo.ps1 Retrieves disk size and usage stats across systems.\nUse Cases:\nCapacity planning for storage upgrades Pre-migration disk audits Alerting on low disk space thresholds 🧠 Get-GPPolicyData.ps1 Extracts Group Policy Object (GPO) data.\nUse Cases:\nDocumenting applied policies for compliance Comparing GPO settings across environments 📦 Get-InstalledSoftware.ps1 Lists installed software on target machines.\nUse Cases:\nSoftware inventory for licensing audits Detecting unauthorized installations Pre-upgrade compatibility checks 🔗 FindGPOLinks.ps1 Finds GPO links across AD structure.\nUse Cases:\nVisualizing GPO application across OUs Identifying redundant or conflicting links Cleanup of legacy policy assignments ",
+  "wordCount" : "332",
   "inLanguage": "en",
-  "datePublished": "2025-05-17T00:00:00Z",
-  "dateModified": "2025-05-17T00:00:00Z",
+  "datePublished": "2025-09-06T00:00:00Z",
+  "dateModified": "2025-09-06T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://adrianmuscat.com/projects/pstools/"
@@ -194,14 +194,77 @@
     <div class="post-description">
       A collection of PowerShell tools and scripts I have developed for various tasks.
     </div>
-    <div class="post-meta"><span title='2025-05-17 00:00:00 +0000 UTC'>May 17, 2025</span>
+    <div class="post-meta"><span title='2025-09-06 00:00:00 +0000 UTC'>September 6, 2025</span>
 
 </div>
   </header> 
   <div class="post-content"><p>Welcome to my collection of PowerShell tools and scripts. These are simple tools I&rsquo;ve created with some System Administration tasks in mind. Feel free to explore, use, and modify them as needed.</p>
 <h2 id="psinfratools">PSInfraTools<a hidden class="anchor" aria-hidden="true" href="#psinfratools">#</a></h2>
 <p>A PowerShell module that provides random functions to manage and retrieve information about Windows systems. It includes functions to get Bitlocker keys from Active Directory, Disk usage, check backup status, User bad password attempts, and more.</p>
+<p>Even though the module is not completely finished, they have proven to be useful in my daily tasks. I plan to continue adding more functions and improving existing ones. I also experimented with using Gitversion to automatically version the module based on my git history and commit keywords. It was also an opportunity to use Github actions to build and test the functions. I used the Pester framework to write unit tests.</p>
 <p><a href="https://github.com/adrimus/PS-InfraTools">GitHub Repository</a></p>
+<p>You can find the functions under <a href="https://github.com/adrimus/PS-InfraTools/tree/main/source/Public">PS-InfraTools Public folder</a>, Below is a rundown of each function and what they can be used for:</p>
+<hr>
+<h3 id="-get-adbitlockerrecoverypwdps1">🔐 <code>Get-ADBitlockerRecoveryPwd.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-get-adbitlockerrecoverypwdps1">#</a></h3>
+<p>Retrieves BitLocker recovery keys from Active Directory.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Helpdesk recovery during user lockouts</li>
+<li>Compliance audits for encrypted endpoints</li>
+<li>Automated reporting of missing recovery keys</li>
+</ul>
+<hr>
+<h3 id="-get-aduserbadpasswordsps1">👤 <code>Get-ADUserBadPasswords.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-get-aduserbadpasswordsps1">#</a></h3>
+<p>Identifies AD users with bad password attempts or lockouts.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Detect brute-force attempts or compromised accounts</li>
+<li>Alerting for high-risk user behavior</li>
+</ul>
+<hr>
+<h3 id="-get-backupjobinfops1">💾 <code>Get-BackupJobInfo.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-get-backupjobinfops1">#</a></h3>
+<p>Checks status and metadata of backup jobs.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Daily health checks of backup infrastructure</li>
+<li>Alerting on failed or incomplete jobs</li>
+</ul>
+<hr>
+<h3 id="-get-disksizeinfops1">💽 <code>Get-DiskSizeInfo.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-get-disksizeinfops1">#</a></h3>
+<p>Retrieves disk size and usage stats across systems.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Capacity planning for storage upgrades</li>
+<li>Pre-migration disk audits</li>
+<li>Alerting on low disk space thresholds</li>
+</ul>
+<hr>
+<h3 id="-get-gppolicydataps1">🧠 <code>Get-GPPolicyData.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-get-gppolicydataps1">#</a></h3>
+<p>Extracts Group Policy Object (GPO) data.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Documenting applied policies for compliance</li>
+<li>Comparing GPO settings across environments</li>
+</ul>
+<hr>
+<h3 id="-get-installedsoftwareps1">📦 <code>Get-InstalledSoftware.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-get-installedsoftwareps1">#</a></h3>
+<p>Lists installed software on target machines.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Software inventory for licensing audits</li>
+<li>Detecting unauthorized installations</li>
+<li>Pre-upgrade compatibility checks</li>
+</ul>
+<hr>
+<h3 id="-findgpolinksps1">🔗 <code>FindGPOLinks.ps1</code><a hidden class="anchor" aria-hidden="true" href="#-findgpolinksps1">#</a></h3>
+<p>Finds GPO links across AD structure.</p>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Visualizing GPO application across OUs</li>
+<li>Identifying redundant or conflicting links</li>
+<li>Cleanup of legacy policy assignments</li>
+</ul>
+<hr>
 
 
   </div>
