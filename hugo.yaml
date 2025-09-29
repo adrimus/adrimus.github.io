@@ -49,7 +49,3 @@ menu:
       name: "Projects"
       url: "/Projects"
       weight: 3
-    - identifier: "Skills"
-      name: "Skills"
-      url: "/skills"
-      weight: 4
