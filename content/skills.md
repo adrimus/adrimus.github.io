@@ -15,9 +15,10 @@ title: "Technical Skillset"
 radar-beta
   showLegend false
   axis ps["PowerShell"], ad["Active Directory"], int["Intune"]
-  axis az["Automation"], dev["Azure DevOps"], bic["Bicep"]
+  axis az["Automation"], cicd["CI/CD (Azure DevOps, Github Actions)"], IaC["IaC (Bicep)"]
   axis dock["Docker"], doc["Documentation"], git["Git"], azu["Azure"]
-  curve adrian["Adrian"]{8, 7.5, 9, 7.5, 7, 6, 7, 9, 7, 6}
+  axis Config["Configuration Management (Ansible, DSC)"]
+  curve adrian["Adrian"]{8, 7.5, 9, 7.5, 7, 6, 7, 9, 7, 6, 6}
 
   max 10
   min 0

@@ -40,12 +40,20 @@ menu:
     - identifier: "Home"
       name: "Home"
       url: "/"
-      weight: 1
+      weight: 5
     - identifier: "Posts"
       name: "Posts"
       url: "/posts"
-      weight: 2
+      weight: 20
     - identifier: "Projects"
       name: "Projects"
       url: "/Projects"
-      weight: 3
+      weight: 30
+    - identifier: "Skills"
+      name: "Skills"
+      url: "/skills"
+      weight: 15
+    - identifier: "About"
+      name: "About"
+      url: "/about"
+      weight: 10

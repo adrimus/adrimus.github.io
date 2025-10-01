@@ -3,11 +3,6 @@ title: "About Me"
 date: "2025-03-22"
 draft: false
 description: "Learn more about who I am and what I do"
-menu:
-  main:
-    identifier: "about"
-    name: "About"
-    weight: 2
 ---
 
 ## Hello, I'm Adrian 👋
