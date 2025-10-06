@@ -18,7 +18,9 @@ I'm a Systems Administrator with a passion for automation and PowerShell. By day
 
 ### Gaming Life
 
-Speaking of gaming, I'm particularly fond of Xcom, Sonic the Hedgehog, Infamous, Batman: Arkham Trilogy and Spiderman games. It's my way of unwinding after a day of scripting and troubleshooting. There's something satisfying about conquering both technical challenges at work and virtual challenges in games. Lately I have less time and I have been enjoying Teenage Mutant Ninja Turtles: Shredder's Revenge.
+Speaking of gaming, I'm particularly fond of Xcom, Sonic the Hedgehog, Infamous, Batman: Arkham Trilogy and Spiderman games. It's my way of unwinding after a day of scripting and troubleshooting. There's something satisfying about conquering both technical challenges at work and virtual challenges in games. 
+
+Lately I have less time and I have been enjoying playing the Nintendo Switch with my kids including games like Mario Kart, Super Mario Party and Bluey.
 
 ### Work history - From ActionScript to PowerShell
 
@@ -28,4 +30,4 @@ Yada, yada, yada, I ended up working as a technician at a larger company and eve
 
 ### Let's Connect
 
-Feel free to reach out through any of the social links. I'm always happy to discuss PowerShell, sysadmin life, gaming, or share dad jokes!
+Feel free to reach out through any of the social links. I'm always happy to discuss PowerShell, sysadmin life, gaming or being a dad!
